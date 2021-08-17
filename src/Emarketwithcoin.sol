@@ -13,13 +13,13 @@ contract Emarketwithcoin {
 	    bool sold;
 	}
 
-	ERC20 public emark;
+	DSToken public emark;
 
 	mapping(uint256=>Item) public items;
 	uint256 public itemCount;
 
 	constructor (address _emark) public {
-		emark = ERC20(_emark);
+		emark = DSToken(_emark);
 	}
 
 	function addItem(string memory _description, uint _price) public returns(uint) {
